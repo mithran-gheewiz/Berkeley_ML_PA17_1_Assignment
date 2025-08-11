@@ -1,7 +1,7 @@
 # Berkeley_ML_PA17_1_Assignment
 # Practical Application III: Comparing Classifiers
 
-Link to the Python file: 
+# Link to the Jupyter Notebook: 
 
 ## Introduction 
 In this practical application, my goal is to compare the performance of the classifiers, namely K Nearest Neighbor, Logistic Regression, Decision Trees, and Support Vector Machines. I utilized a dataset related to marketing bank products over the telephone. The dataset comes from the UCI Machine Learning repository link. The data is from a Portugese banking institution and is a collection of the results of multiple marketing campaigns. 
@@ -14,7 +14,7 @@ bank-additional-names.txt → the description file with attribute details
 
 The dataset collected is related to 17 marketing campaigns that occurred between May 2008 and November 2010, corresponding to a total of 79354 contacts. During these phone campaigns, an attractive long-term deposit application, with good interest rates, was offered. 
 
-## 2: Read in the Data
+## 2: Read in the Data and 3: Understanding the Features
 Using pandas, the data from bank-additional-full.csv was read in. There are 21 columns including the target column y. The description of the columns are shown below:  
 ### standard attributes
 1 - age (numeric)
@@ -44,4 +44,18 @@ Using pandas, the data from bank-additional-full.csv was read in. There are 21 c
 ### Output variable (desired target):
 21 - y - has the client subscribed a term deposit? (binary: 'yes','no')
 
+An initial check showed that there appears to be no missing values. Upon further investigation of the data, it was determined that there are placeholders in the data set for missing values called "unknown".
+I counted all the unknown values and are shown below for the columns: 
+Number of 'unknown' entries per column:
+job           330
+marital        80
+education    1731
+default      8597
+housing       990
+loan          990
 
+## 4: Understanding the Task
+Based on what I have explored in the data, the business objective is to predict which customers are most likely to subscribe to a long-term term deposit, so the bank can focus its marketing calls on those most likely to say “yes.” The goal of the model is to predict "yes" so that the bank gets a new or returning customer. 
+
+## 5: Engineering Features and EDA 
+I did exploratory data analysis (EDA) and generated some plots to understand the data better for feature selection. Below are a few of the figures that are relavent. 
