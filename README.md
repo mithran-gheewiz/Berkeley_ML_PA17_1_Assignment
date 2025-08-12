@@ -1,7 +1,7 @@
 # Berkeley_ML_PA17_1_Assignment
 # Practical Application III: Comparing Classifiers
 
-# Link to the Jupyter Notebook: 
+## Link to the Jupyter Notebook: https://github.com/mithran-gheewiz/Berkeley_ML_PA17_1_Assignment/blob/main/M11_Mithran_Menon_Bank_Data.ipynb
 
 ## Introduction 
 In this practical application, my goal is to compare the performance of the classifiers, namely K Nearest Neighbor, Logistic Regression, Decision Trees, and Support Vector Machines. I utilized a dataset related to marketing bank products over the telephone. The dataset comes from the UCI Machine Learning repository link. The data is from a Portugese banking institution and is a collection of the results of multiple marketing campaigns. 
