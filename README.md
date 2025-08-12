@@ -93,6 +93,38 @@ I continued with logistic regression. This provides a meaningful starting point 
 The model also had a high accuracy of 0.887. 
 The model predicted all samples as “No”, so it never correctly identified a positive case. This happens because:
 The dataset is highly imbalanced (~89% “No”, 11% “Yes”) as shown in the Fig. 1. 
+I re-ran the model with class_weight='balanced' on the Logistic Regression to improve recall and precision. The overall accuracy decreased to 0.584. This is not all bad. 
+Of all the customers who actually said "yes", now 62.3% the model correctly identify compared to zero from before. This has improved recall. However, precision is still low at ~16 %.
+
+## 10: Model Comparisons
+Next I aimed to compare the performance of the Logistic Regression model to the KNN algorithm, Decision Tree, and SVM models. Using the default settings for each of the models, I fit and score each. Also, I compared the fit time of each of the models. The results are shown below:
+
+Table 1. Model comparisons
+<img width="461" height="180" alt="image" src="https://github.com/user-attachments/assets/90204daa-22fa-46cb-b56e-e24e581b9344" />
+
+## 11: Improving the Model
+I performed hyperparameter tuning & Grid Search CV. The best-performing KNN model used 3 nearest neighbors. Instead of all neighbors voting equally, closer neighbors have more influence on the prediction. The mean F1-Score is 0.135. 
+
+Next, I set up GridSearchCV for all four models, optimize them for F1-score, and compare them using accuracy, precision, recall, and F1.
+
+Table 2: Model comparisons after improving it
+<img width="980" height="245" alt="image" src="https://github.com/user-attachments/assets/16a430c2-5364-49f3-92e4-3a4e0275c12a" />
+
+## Model Interpretation
+SVM had the highest raw accuracy but classified very low positives. Therefore, it is not useful for this business problem.
+KNN performed well in accuracy but extremely poorly in recall (missed ~90% of subscribers).
+Decision Tree gave balanced precision/recall but still underperformed logistic regression on recall.
+Logistic Regression with class_weight='balanced' produced the highest recall (0.578) and the best F1-score (0.246) among the models. While accuracy was lower, recall is the more important measure here.
+
+## Justification for Final Model
+Logistic Regression (balanced) is the preferred final model because:
+High Recall. Therefore, it catches more potential subscribers, reducing missed opportunities.
+Best F1-score among tuned models → balances precision and recall better than others.
+Interpretability: coefficients show which customer attributes influence subscription likelihood, aiding in marketing strategy design.
+Simplicity: fast to train, easy to deploy, and less prone to overfitting than deeper trees or complex kernels.
+
+
+
 
 
 
