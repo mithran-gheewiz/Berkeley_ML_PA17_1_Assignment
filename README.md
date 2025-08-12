@@ -73,3 +73,29 @@ Fig. 3. Top 10 Categories - Categorical data
 <img width="600" height="533" alt="image" src="https://github.com/user-attachments/assets/c23241df-2604-4f82-a668-00935526191e" />
 Fig. 4. Numeric feature Correlation heatmap
 
+The indicators (emp.var.rate, euribor3m, nr.employed, cons.price.idx) are highly correlated with each other — this is expected because they often move together over time.
+Previous and Pdays have a moderate positive correlation (0.5), since they both relate to previous marketing contact history. I restricted the dataset to relevant bank info features, handled "unknown", and set up categorical encoding. I separated X and y, identified feature types, and created a ColumnTransformer that one-hot encodes categoricals while keeping numeric features as-is.
+
+## 6: Train/Test split
+With your data prepared, split it into a train and test set. I obtained the following: 
+Training set shape: (32950, 7)
+Test set shape: (8238, 7)
+
+## 7: A Baseline Model
+For the baseline model, I used a simple majority class baseline to predict the most frequent class for all cases which is "no". Results are shown below: 
+Majority Regression Accuracy: 0.887
+Precision_score: Of all the customers predicted as "yes", what fraction actually said "yes".  Precision score: 0
+Recall_score: Of all the customers who actually said "yes", what fraction did the model correctly identify. Recall score: 0
+Majority class accuracy is high (88.7%) because the dataset is imbalanced, but it had 0 recall for the minority class (yes responses). We need a better model. 
+
+## 8: A Simple Model and 9: Score the Model
+I continued with logistic regression. This provides a meaningful starting point that accounts for the features. 
+The model also had a high accuracy of 0.887. 
+The model predicted all samples as “No”, so it never correctly identified a positive case. This happens because:
+The dataset is highly imbalanced (~89% “No”, 11% “Yes”) as shown in the Fig. 1. 
+
+
+
+
+
+
