@@ -59,3 +59,8 @@ Based on what I have explored in the data, the business objective is to predict 
 
 ## 5: Engineering Features and EDA 
 I did exploratory data analysis (EDA) and generated some plots to understand the data better for feature selection. Below are a few of the figures that are relavent. 
+<img width="736" height="504" alt="image" src="https://github.com/user-attachments/assets/6fdb902f-8c7d-47e3-8152-bd273cdc81ae" />
+Fig. 1. Class balance
+
+<img width="665" height="488" alt="image" src="https://github.com/user-attachments/assets/4f73b00e-7b7a-4861-85f8-96ba921f8c27" />
+Fig. 2. Histogram: age
