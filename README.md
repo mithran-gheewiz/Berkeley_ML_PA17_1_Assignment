@@ -58,9 +58,18 @@ loan          990
 Based on what I have explored in the data, the business objective is to predict which customers are most likely to subscribe to a long-term term deposit, so the bank can focus its marketing calls on those most likely to say “yes.” The goal of the model is to predict "yes" so that the bank gets a new or returning customer. 
 
 ## 5: Engineering Features and EDA 
-I did exploratory data analysis (EDA) and generated some plots to understand the data better for feature selection. Below are a few of the figures that are relavent. 
+I did exploratory data analysis (EDA) and generated some plots to understand the data better for feature selection. 
+Below are a few of the figures that are relavent. 
+
 <img width="736" height="504" alt="image" src="https://github.com/user-attachments/assets/6fdb902f-8c7d-47e3-8152-bd273cdc81ae" />
 Fig. 1. Class balance
 
 <img width="665" height="488" alt="image" src="https://github.com/user-attachments/assets/4f73b00e-7b7a-4861-85f8-96ba921f8c27" />
 Fig. 2. Histogram: age
+
+<img width="709" height="510" alt="image" src="https://github.com/user-attachments/assets/0ae9f35f-a529-446f-bee8-41a391902883" />
+Fig. 3. Top 10 Categories - Categorical data
+
+<img width="600" height="533" alt="image" src="https://github.com/user-attachments/assets/c23241df-2604-4f82-a668-00935526191e" />
+Fig. 4. Numeric feature Correlation heatmap
+
